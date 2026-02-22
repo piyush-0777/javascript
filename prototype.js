@@ -26,3 +26,17 @@ person.prototype.getFullName = function () {
 }
 console.log(p1.getFullName()) // output: piyush khandhar
 console.log(p2.getFullName()) // output: vimal nakum 
+
+
+/*----------------------------prototype-inheritance--------------------------------------- */
+
+function SuperHero(fName , lName) {
+    person.call(this , fName , lName) // send this obj as first parameter
+    this.isSuperHero = true
+}
+SuperHero.prototype.fightCrime = function () {
+    console.log('Fighting crime')
+}
+
+SuperHero.prototype = Object.create(person.prototype)
+const batman = new SuperHero('piyush' , 'khandhar')
