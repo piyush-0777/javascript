@@ -38,7 +38,7 @@ SuperHero.prototype.fightCrime = function () {
     console.log('Fighting crime')
 }
 
-//piiyush
+
 
 SuperHero.prototype = Object.create(person.prototype)
 const batman = new SuperHero('piyush' , 'khandhar')
